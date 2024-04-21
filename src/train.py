@@ -31,6 +31,7 @@ class Trainer:
             
             self.save_checkpoint(epoch)
 
+        self.save_model()
         self.plot_loss(train_losses=train_losses, val_losses=val_losses)
           
     def train_epoch(self, epoch):
@@ -51,7 +52,7 @@ class Trainer:
             self.optimizer.step()
 
         avg_loss = total_loss / len(dataloader)
-        print(f'Epoch {epoch}: Training loss: {avg_loss}')
+        print(f'Epoch {epoch+1}: Training loss: {avg_loss}')
 
         return avg_loss
 
@@ -71,20 +72,28 @@ class Trainer:
                 total_loss += loss.item()
 
         avg_loss = total_loss / len(dataloader)
-        print(f'Epoch {epoch}: Validation loss: {avg_loss}')
+        print(f'Epoch {epoch+1}: Validation loss: {avg_loss}')
 
         return avg_loss
     
     def save_checkpoint(self, epoch):
         filename = os.path.join(self.output_dir, f"epoch_{epoch+1}.pt")
+
         torch.save({
             'model': self.model.state_dict(),
             'optimizer': self.optimizer.state_dict(),
         }, filename)
 
+    def save_model(self):
+        filename = os.path.join(self.output_dir, f"model.pt")
+
+        script_model = torch.jit.script(self.model)
+        script_model.save(filename)
+
     def plot_loss(self, train_losses, val_losses):
         filename = os.path.join(self.output_dir, "loss_plot.png")
 
+        plt.clf()
         plt.plot(train_losses, label='Train Loss')
         plt.plot(val_losses, label='Val Loss')
         plt.xlabel('Epoch')
