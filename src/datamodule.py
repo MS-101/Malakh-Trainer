@@ -5,16 +5,16 @@ from dataset import MvsFSBitboardDataset, MvsFSImageDataset
 
 
 class DataModuleBitboards:
-    def __init__(self, filename):
+    def __init__(self, filename, ratio, batch_size):
         data = pd.read_csv(filename)
 
-        self.ratio = 0.8
-        train_data, val_data = train_test_split(data, train_size=self.ratio, random_state=42)
+        self.ratio = ratio
+        train_data, val_data = train_test_split(data, train_size=self.ratio, random_state=10)
 
         self.train_dataset = MvsFSBitboardDataset(train_data)
         self.val_dataset = MvsFSBitboardDataset(val_data)
 
-        self.batch_size = 64
+        self.batch_size = batch_size
         self.train_loader = DataLoader(
             self.train_dataset,
             batch_size=self.batch_size,
@@ -27,16 +27,16 @@ class DataModuleBitboards:
         )
 
 class DataModuleImages:
-    def __init__(self, filename):
+    def __init__(self, filename, ratio, batch_size):
         data = pd.read_csv(filename)
 
-        self.ratio = 0.8
-        train_data, val_data = train_test_split(data, train_size=self.ratio, random_state=42)
+        self.ratio = ratio
+        train_data, val_data = train_test_split(data, train_size=self.ratio, random_state=10)
 
         self.train_dataset = MvsFSImageDataset(train_data)
         self.val_dataset = MvsFSImageDataset(val_data)
 
-        self.batch_size = 64
+        self.batch_size = batch_size
         self.train_loader = DataLoader(
             self.train_dataset,
             batch_size=self.batch_size,
