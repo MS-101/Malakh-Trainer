@@ -3,27 +3,49 @@ import torch
 import torchsummary
 import matplotlib.pyplot as plt
 from tqdm import tqdm
+from IPython.utils.io import Tee
+from contextlib import closing
 
+
+class EarlyStopper:
+    def __init__(self, patience=1, min_delta=0):
+        self.patience = patience
+        self.min_delta = min_delta
+        self.counter = 0
+        self.min_val_loss = float('inf')
+
+    def early_stop(self, val_loss):
+        if val_loss < self.min_val_loss:
+            self.min_val_loss = val_loss
+            self.counter = 0
+        elif val_loss > (self.min_val_loss + self.min_delta):
+            self.counter += 1
+            if self.counter >= self.patience:
+                return True
+        return False
 
 def decide_device():
     if (torch.cuda.is_available()): return "cuda"
     return "cpu"
 
 class Trainer:
-    def __init__(self, datamodule, model, criterion, optimizer, max_epoch, output_dir, input_shape):
+    def __init__(self, datamodule, model, input_shape, criterion, optimizer, patience, min_delta, max_epoch, output_dir):
         self.device = torch.device(decide_device())
 
         self.datamodule = datamodule
+
         self.model = model.to(self.device)
-        self.criterion = criterion
-        self.optimizer = optimizer
-        self.max_epoch = max_epoch
-        self.output_dir = output_dir
         self.input_shape = input_shape
 
-    def fit(self, checkpoint=None):
-        torchsummary.summary(self.model, self.input_shape)
+        self.criterion = criterion
+        self.optimizer = optimizer
+        self.early_stopper = EarlyStopper(patience=patience, min_delta=min_delta)
+        self.max_epoch = max_epoch
 
+        self.output_dir = output_dir
+        os.makedirs(self.output_dir, exist_ok=True)
+
+    def fit(self, checkpoint=None):
         if checkpoint:
             self.load_checkpoint(filename=checkpoint)
         else:
@@ -32,25 +54,38 @@ class Trainer:
 
             self.cur_epoch = 0
 
-        for epoch in range(self.cur_epoch, self.max_epoch):
-            self.cur_epoch = epoch
+        with closing(Tee(os.path.join(self.output_dir, "model.txt"))):
+            torchsummary.summary(self.model, self.input_shape)
 
-            train_loss = self.train_epoch(epoch)
-            self.train_losses.append(train_loss)
+        with closing(Tee(os.path.join(self.output_dir, "epochs.txt"))):
+            for epoch in range(self.cur_epoch, self.max_epoch):
+                self.cur_epoch = epoch
 
-            val_loss = self.val_epoch(epoch)
-            self.val_losses.append(val_loss)
-            
-            self.save_checkpoint(filename=f"epoch_{epoch}.pt")
+                train_loss = self.train_epoch(epoch)
+                self.train_losses.append(train_loss)
 
-        self.save_model()
-        self.save_plot(filename='loss.png', caption='Loss function', metric_name='Loss', train_values=self.train_losses, val_values=self.val_losses)
+                val_loss = self.val_epoch(epoch)
+                self.val_losses.append(val_loss)
+                
+                self.save_checkpoint(filename=f"epoch_{epoch}.pt")
+
+                if self.early_stopper.early_stop(val_loss):
+                    print(f'Early stopping at epoch {epoch}')
+                    break
+
+            self.save_plot(filename='loss.png', caption='Loss function', metric_name='Loss', train_values=self.train_losses, val_values=self.val_losses)
+            self.save_model()
+
+            self.test_epoch()
           
     def train_epoch(self, epoch):
         return self.epoch(dataloader=self.datamodule.train_loader, training=True, caption=f'Training epoch {epoch}')
 
     def val_epoch(self, epoch):
         return self.epoch(dataloader=self.datamodule.val_loader, training=False, caption=f'Validation epoch {epoch}')
+
+    def test_epoch(self):
+        return self.epoch(dataloader=self.datamodule.test_loader, training=False, caption=f'Testing epoch')
     
     def epoch(self, dataloader, training, caption):
         if training:

@@ -10,9 +10,11 @@ class DataModuleBitboards:
 
         self.ratio = ratio
         train_data, val_data = train_test_split(data, train_size=self.ratio, random_state=10)
+        val_data, test_data = train_test_split(val_data, train_size=0.5, random_state=10)
 
         self.train_dataset = MvsFSBitboardDataset(train_data)
         self.val_dataset = MvsFSBitboardDataset(val_data)
+        self.test_dataset = MvsFSBitboardDataset(test_data)
 
         self.batch_size = batch_size
         self.train_loader = DataLoader(
@@ -25,6 +27,11 @@ class DataModuleBitboards:
             batch_size=self.batch_size,
             shuffle=False
         )
+        self.test_loader = DataLoader(
+            self.test_dataset,
+            batch_size=self.batch_size,
+            shuffle=False
+        )
 
 class DataModuleImages:
     def __init__(self, filename, ratio, batch_size):
@@ -32,9 +39,11 @@ class DataModuleImages:
 
         self.ratio = ratio
         train_data, val_data = train_test_split(data, train_size=self.ratio, random_state=10)
+        val_data, test_data = train_test_split(val_data, train_size=0.5, random_state=10)
 
         self.train_dataset = MvsFSImageDataset(train_data)
         self.val_dataset = MvsFSImageDataset(val_data)
+        self.test_dataset = MvsFSImageDataset(test_data)
 
         self.batch_size = batch_size
         self.train_loader = DataLoader(
@@ -44,6 +53,11 @@ class DataModuleImages:
         )
         self.val_loader = DataLoader(
             self.val_dataset,
+            batch_size=self.batch_size,
+            shuffle=False
+        )
+        self.test_loader = DataLoader(
+            self.test_dataset,
             batch_size=self.batch_size,
             shuffle=False
         )

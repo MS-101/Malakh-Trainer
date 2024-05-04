@@ -26,5 +26,5 @@ class MvsFSImageDataset(Dataset):
     def __getitem__(self, idx):
         sample = self.data.iloc[idx]
         x = torch.tensor(json.loads(sample.iloc[0]), dtype=torch.float32)
-        y = torch.tensor(sample.iloc[1], dtype=torch.float32)
+        y = torch.tensor(sample.iloc[1], dtype=torch.float32).unsqueeze(0)
         return x, y

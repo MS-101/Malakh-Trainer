@@ -2,7 +2,7 @@ import torch.nn as nn
 
 
 class MLP(nn.Module):
-    def __init__(self, input_features, hidden_features, output_features, layers, activ, norm):
+    def __init__(self, input_features, hidden_features, output_features, layers, norm, activ):
         super().__init__()
 
         # input layer
@@ -37,7 +37,7 @@ class MLP(nn.Module):
         return x
 
 class CNN(nn.Module):
-    def __init__(self, conv_layers, conv_activ, conv_norm, fc_layers, fc_activ, fc_norm):
+    def __init__(self, conv_layers, conv_norm, conv_activ, fc_layers, fc_activ):
         super().__init__()
 
         # convolution layer
@@ -52,7 +52,7 @@ class CNN(nn.Module):
                 nn.Conv2d(in_channels, out_channels, kernel_size=3, padding=1),
                 conv_norm(out_channels),
                 conv_activ(),
-                nn.MaxPool2d(kernel_size=2, stride=2),                
+                nn.MaxPool2d(kernel_size=2, stride=2),
             ]
 
             in_channels = out_channels
@@ -73,7 +73,6 @@ class CNN(nn.Module):
         for _ in range(fc_layers):
             fc += [
                 nn.Linear(in_features, out_features),
-                fc_norm(out_features),
                 fc_activ()
             ]
 
