@@ -2,18 +2,14 @@
         Layer (type)               Output Shape         Param #
 ================================================================
             Linear-1                   [-1, 50]             700
-    InstanceNorm1d-2                   [-1, 50]               0
-              ReLU-3                   [-1, 50]               0
-            Linear-4                   [-1, 50]           2,550
-    InstanceNorm1d-5                   [-1, 50]               0
+              ReLU-2                   [-1, 50]               0
+            Linear-3                   [-1, 50]           2,550
+              ReLU-4                   [-1, 50]               0
+            Linear-5                   [-1, 50]           2,550
               ReLU-6                   [-1, 50]               0
             Linear-7                   [-1, 50]           2,550
-    InstanceNorm1d-8                   [-1, 50]               0
-              ReLU-9                   [-1, 50]               0
-           Linear-10                   [-1, 50]           2,550
-   InstanceNorm1d-11                   [-1, 50]               0
-             ReLU-12                   [-1, 50]               0
-           Linear-13                    [-1, 1]              51
+              ReLU-8                   [-1, 50]               0
+            Linear-9                    [-1, 1]              51
 ================================================================
 Total params: 8,401
 Trainable params: 8,401

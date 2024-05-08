@@ -19,8 +19,7 @@ def mlp_experiment(input, output_dir, hidden_features, layers):
         hidden_features=hidden_features,
         output_features=1,
         layers=layers,
-        activ=nn.ReLU,
-        norm=nn.InstanceNorm1d
+        activ=nn.ReLU
     )
 
     # training config

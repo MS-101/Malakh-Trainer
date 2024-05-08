@@ -2,14 +2,13 @@ import torch.nn as nn
 
 
 class MLP(nn.Module):
-    def __init__(self, input_features, hidden_features, output_features, layers, norm, activ):
+    def __init__(self, input_features, hidden_features, output_features, layers, activ):
         super().__init__()
 
         # input layer
 
         self.input = nn.Sequential(
             nn.Linear(input_features, hidden_features),
-            norm(hidden_features),
             activ()
         )
 
@@ -20,7 +19,6 @@ class MLP(nn.Module):
         for _ in range(layers):
             hidden += [
                 nn.Linear(hidden_features, hidden_features),
-                norm(hidden_features),
                 activ()
             ]
 
