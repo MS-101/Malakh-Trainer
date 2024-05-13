@@ -1,3 +1,11 @@
+"""!
+@file   experiment.py
+@brief  Definícia konfigurovateľných experimentov.
+
+@author Martin Šváb
+@date   Máj 2024
+"""
+
 import torch.nn as nn
 import torch.optim as optim
 from model import MLP, CNN
@@ -6,6 +14,15 @@ from trainer import Trainer
 
 
 def mlp_experiment(input, output_dir, hidden_features, layers):
+    """!
+    Experiment na testovanie efektivity MLP architektúry a bitboardovej formy MvsFS datasetu.
+
+    @param input: Názov vstupného csv súboru.
+    @param output_dir: Priečinok kde sa uložia výsledky experimentu.
+    @param hidden_features: Počet neurónov skrytých vrstiev MLP architektúry.
+    @param layers: Počet skrytých vrstiev MLP architektúry.
+    """
+
     print()
     print('Running MLP experiment on ' + input)
     print()
@@ -43,6 +60,14 @@ def mlp_experiment(input, output_dir, hidden_features, layers):
     trainer.fit()
 
 def cnn_experiment(input, output_dir, fc_layers):
+    """!
+    Experiment na testovanie efektivity CNN architektúry a obrázkovej formy MvsFS datasetu.
+
+    @param input: Názov vstupného csv súboru.
+    @param output_dir: Priečinok kde sa uložia výsledky experimentu.
+    @param fc_layers: Počet plne prepojených vrstiev CNN architektúry.
+    """
+
     print()
     print('Running CNN experiment on ' + input)
     print()

@@ -1,0 +1,46 @@
+\doxysection{Dokumentácia súboru trainer.\+py}
+\hypertarget{trainer_8py}{}\label{trainer_8py}\index{trainer.py@{trainer.py}}
+
+
+Definícia trénovania neurónovej siete.  
+
+
+\doxysubsubsection*{Triedy}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtrainer_1_1_early_stopper}{trainer.\+Early\+Stopper}}
+\begin{DoxyCompactList}\small\item\em Trieda zodpovedná za predčasné zastavenie trénovania. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtrainer_1_1_trainer}{trainer.\+Trainer}}
+\begin{DoxyCompactList}\small\item\em Trieda zodpovedná za trénovanie neurónových sietí. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcie}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{trainer_8py_a79cd9d6036faef8f85491655a779e3da}{trainer.\+decide\+\_\+device}} ()
+\begin{DoxyCompactList}\small\item\em Pomocná funkcia na rozhodnutie použítia CPU alebo cuda režimu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Definícia trénovania neurónovej siete. 
+
+\begin{DoxyAuthor}{Autor}
+Martin Šváb 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Dátum}
+Máj 2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Dokumentácia funkcií}
+\Hypertarget{trainer_8py_a79cd9d6036faef8f85491655a779e3da}\label{trainer_8py_a79cd9d6036faef8f85491655a779e3da} 
+\index{trainer.py@{trainer.py}!decide\_device@{decide\_device}}
+\index{decide\_device@{decide\_device}!trainer.py@{trainer.py}}
+\doxysubsubsection{\texorpdfstring{decide\_device()}{decide\_device()}}
+{\footnotesize\ttfamily trainer.\+decide\+\_\+device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pomocná funkcia na rozhodnutie použítia CPU alebo cuda režimu. 
+
+\begin{DoxyReturn}{Návratová hodnota}
+Ak je cuda dostupné tak hodnota cuda, ak nie je dostupné tak hodnota cpu. 
+\end{DoxyReturn}

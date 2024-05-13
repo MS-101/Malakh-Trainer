@@ -1,0 +1,534 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Malakh Trainer - technická dokumentácia: Dokumentácia triedy trainer.Trainer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Malakh Trainer - technická dokumentácia
+   </div>
+   <div id="projectbrief">Trénovací skript neurónových model pre šachový engine Malakh</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generované programom Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Hľadať');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Načítam...</div>
+<div class="SRStatus" id="Searching">Vyhľadávam...</div>
+<div class="SRStatus" id="NoMatches">Nič sa nenašlo</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>trainer</b></li><li class="navelem"><a class="el" href="classtrainer_1_1_trainer.html">Trainer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Verejné metódy</a> &#124;
+<a href="#pub-attribs">Verejné atribúty</a> &#124;
+<a href="classtrainer_1_1_trainer-members.html">Zoznam všetkých členov</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentácia triedy trainer.Trainer</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Trieda zodpovedná za trénovanie neurónových sietí.  
+ <a href="#details">...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Verejné metódy</h2></td></tr>
+<tr class="memitem:ae02eae81967eedeaa44aec0597998281" id="r_ae02eae81967eedeaa44aec0597998281"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae02eae81967eedeaa44aec0597998281">__init__</a> (self, datamodule, model, input_shape, criterion, optimizer, patience, min_delta, max_epoch, output_dir)</td></tr>
+<tr class="memdesc:ae02eae81967eedeaa44aec0597998281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konštruktor konfigurovateľného trénera neurónových sietí.  <br /></td></tr>
+<tr class="separator:ae02eae81967eedeaa44aec0597998281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ee9562c70dd664812523512d73faefa" id="r_a0ee9562c70dd664812523512d73faefa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ee9562c70dd664812523512d73faefa">fit</a> (self, checkpoint=None)</td></tr>
+<tr class="memdesc:a0ee9562c70dd664812523512d73faefa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Táto funkcia spustí trénovanie neurónovej siete.  <br /></td></tr>
+<tr class="separator:a0ee9562c70dd664812523512d73faefa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe93d5aad14d3e6afb0786a6307043b6" id="r_afe93d5aad14d3e6afb0786a6307043b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe93d5aad14d3e6afb0786a6307043b6">train_epoch</a> (self, <a class="el" href="#a55eef41d121027a7fe2d1f66c2936c05">epoch</a>)</td></tr>
+<tr class="memdesc:afe93d5aad14d3e6afb0786a6307043b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spustenie trénovacej epochy.  <br /></td></tr>
+<tr class="separator:afe93d5aad14d3e6afb0786a6307043b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a44214cf5dd8dfe963eec14fce2efee" id="r_a8a44214cf5dd8dfe963eec14fce2efee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a44214cf5dd8dfe963eec14fce2efee">val_epoch</a> (self, <a class="el" href="#a55eef41d121027a7fe2d1f66c2936c05">epoch</a>)</td></tr>
+<tr class="memdesc:a8a44214cf5dd8dfe963eec14fce2efee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spustenie validačnej epochy.  <br /></td></tr>
+<tr class="separator:a8a44214cf5dd8dfe963eec14fce2efee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a002cd053cf336dd3ffbaff0487f8c591" id="r_a002cd053cf336dd3ffbaff0487f8c591"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a002cd053cf336dd3ffbaff0487f8c591">test_epoch</a> (self)</td></tr>
+<tr class="memdesc:a002cd053cf336dd3ffbaff0487f8c591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spustenie testovacej epochy.  <br /></td></tr>
+<tr class="separator:a002cd053cf336dd3ffbaff0487f8c591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55eef41d121027a7fe2d1f66c2936c05" id="r_a55eef41d121027a7fe2d1f66c2936c05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55eef41d121027a7fe2d1f66c2936c05">epoch</a> (self, dataloader, training, caption)</td></tr>
+<tr class="memdesc:a55eef41d121027a7fe2d1f66c2936c05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generická metóda pre všetky epochy.  <br /></td></tr>
+<tr class="separator:a55eef41d121027a7fe2d1f66c2936c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7011bc6b0eb6e2da1d67f2312b41aa26" id="r_a7011bc6b0eb6e2da1d67f2312b41aa26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7011bc6b0eb6e2da1d67f2312b41aa26">load_checkpoint</a> (self, filename)</td></tr>
+<tr class="memdesc:a7011bc6b0eb6e2da1d67f2312b41aa26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Načítanie priebežných výsledkov trénovania z checkpointu.  <br /></td></tr>
+<tr class="separator:a7011bc6b0eb6e2da1d67f2312b41aa26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83007cd1322a21a4c84cbf05f6db7a51" id="r_a83007cd1322a21a4c84cbf05f6db7a51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83007cd1322a21a4c84cbf05f6db7a51">save_checkpoint</a> (self, filename)</td></tr>
+<tr class="memdesc:a83007cd1322a21a4c84cbf05f6db7a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uloženie priebežných výsledkov trénovania do checkpointu.  <br /></td></tr>
+<tr class="separator:a83007cd1322a21a4c84cbf05f6db7a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19015a3e48001d0df25f9ba9b3ba9aa4" id="r_a19015a3e48001d0df25f9ba9b3ba9aa4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19015a3e48001d0df25f9ba9b3ba9aa4">save_model</a> (self)</td></tr>
+<tr class="memdesc:a19015a3e48001d0df25f9ba9b3ba9aa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uloženie výsledného modelu do jit formátu.  <br /></td></tr>
+<tr class="separator:a19015a3e48001d0df25f9ba9b3ba9aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd28aae9d370340080a973ac152f1827" id="r_acd28aae9d370340080a973ac152f1827"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd28aae9d370340080a973ac152f1827">save_plot</a> (self, filename, caption, metric_name, train_values, val_values)</td></tr>
+<tr class="memdesc:acd28aae9d370340080a973ac152f1827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uloženie trénovacích a validačných metrík do grafu po ukončení trénovania.  <br /></td></tr>
+<tr class="separator:acd28aae9d370340080a973ac152f1827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Verejné atribúty</h2></td></tr>
+<tr class="memitem:acdc30e71d17dbbc4c40d39d79a855f12" id="r_acdc30e71d17dbbc4c40d39d79a855f12"><td class="memItemLeft" align="right" valign="top"><a id="acdc30e71d17dbbc4c40d39d79a855f12" name="acdc30e71d17dbbc4c40d39d79a855f12"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>device</b></td></tr>
+<tr class="separator:acdc30e71d17dbbc4c40d39d79a855f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d6f844a38e98116f4f393e0beb65d52" id="r_a1d6f844a38e98116f4f393e0beb65d52"><td class="memItemLeft" align="right" valign="top"><a id="a1d6f844a38e98116f4f393e0beb65d52" name="a1d6f844a38e98116f4f393e0beb65d52"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>datamodule</b></td></tr>
+<tr class="separator:a1d6f844a38e98116f4f393e0beb65d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab032d4299faea7392c8cd80999fc35a1" id="r_ab032d4299faea7392c8cd80999fc35a1"><td class="memItemLeft" align="right" valign="top"><a id="ab032d4299faea7392c8cd80999fc35a1" name="ab032d4299faea7392c8cd80999fc35a1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>model</b></td></tr>
+<tr class="separator:ab032d4299faea7392c8cd80999fc35a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43ff58e7f778821a4ce9855f544a5eae" id="r_a43ff58e7f778821a4ce9855f544a5eae"><td class="memItemLeft" align="right" valign="top"><a id="a43ff58e7f778821a4ce9855f544a5eae" name="a43ff58e7f778821a4ce9855f544a5eae"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>input_shape</b></td></tr>
+<tr class="separator:a43ff58e7f778821a4ce9855f544a5eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a066696d96dd24d6e829c1196d3b222bd" id="r_a066696d96dd24d6e829c1196d3b222bd"><td class="memItemLeft" align="right" valign="top"><a id="a066696d96dd24d6e829c1196d3b222bd" name="a066696d96dd24d6e829c1196d3b222bd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>criterion</b></td></tr>
+<tr class="separator:a066696d96dd24d6e829c1196d3b222bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b94ce7b73b781862ec5b01bd1c773de" id="r_a1b94ce7b73b781862ec5b01bd1c773de"><td class="memItemLeft" align="right" valign="top"><a id="a1b94ce7b73b781862ec5b01bd1c773de" name="a1b94ce7b73b781862ec5b01bd1c773de"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>optimizer</b></td></tr>
+<tr class="separator:a1b94ce7b73b781862ec5b01bd1c773de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7a28db6a5d4e768f72f6d0a0a02631" id="r_a6e7a28db6a5d4e768f72f6d0a0a02631"><td class="memItemLeft" align="right" valign="top"><a id="a6e7a28db6a5d4e768f72f6d0a0a02631" name="a6e7a28db6a5d4e768f72f6d0a0a02631"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>early_stopper</b></td></tr>
+<tr class="separator:a6e7a28db6a5d4e768f72f6d0a0a02631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90fa9c02e8f28b8bded6bdf153cb5ef7" id="r_a90fa9c02e8f28b8bded6bdf153cb5ef7"><td class="memItemLeft" align="right" valign="top"><a id="a90fa9c02e8f28b8bded6bdf153cb5ef7" name="a90fa9c02e8f28b8bded6bdf153cb5ef7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>max_epoch</b></td></tr>
+<tr class="separator:a90fa9c02e8f28b8bded6bdf153cb5ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af97a699517c9460aedb43c5c5518ad3e" id="r_af97a699517c9460aedb43c5c5518ad3e"><td class="memItemLeft" align="right" valign="top"><a id="af97a699517c9460aedb43c5c5518ad3e" name="af97a699517c9460aedb43c5c5518ad3e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>output_dir</b></td></tr>
+<tr class="separator:af97a699517c9460aedb43c5c5518ad3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a204a7c9ba5fdf496d2dfc7f3cafb9" id="r_a42a204a7c9ba5fdf496d2dfc7f3cafb9"><td class="memItemLeft" align="right" valign="top"><a id="a42a204a7c9ba5fdf496d2dfc7f3cafb9" name="a42a204a7c9ba5fdf496d2dfc7f3cafb9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>train_losses</b></td></tr>
+<tr class="separator:a42a204a7c9ba5fdf496d2dfc7f3cafb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28f743aae458e816580b5906ca9dad12" id="r_a28f743aae458e816580b5906ca9dad12"><td class="memItemLeft" align="right" valign="top"><a id="a28f743aae458e816580b5906ca9dad12" name="a28f743aae458e816580b5906ca9dad12"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>val_losses</b></td></tr>
+<tr class="separator:a28f743aae458e816580b5906ca9dad12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20ada17cd38366ca6dcf5715f5f8957a" id="r_a20ada17cd38366ca6dcf5715f5f8957a"><td class="memItemLeft" align="right" valign="top"><a id="a20ada17cd38366ca6dcf5715f5f8957a" name="a20ada17cd38366ca6dcf5715f5f8957a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>cur_epoch</b></td></tr>
+<tr class="separator:a20ada17cd38366ca6dcf5715f5f8957a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailný popis</h2>
+<div class="textblock"><p>Trieda zodpovedná za trénovanie neurónových sietí. </p>
+</div><h2 class="groupheader">Dokumentácia konštruktoru a deštruktoru</h2>
+<a id="ae02eae81967eedeaa44aec0597998281" name="ae02eae81967eedeaa44aec0597998281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae02eae81967eedeaa44aec0597998281">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">trainer.Trainer.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>datamodule</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>model</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>input_shape</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>criterion</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>optimizer</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>patience</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>min_delta</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>max_epoch</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>output_dir</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konštruktor konfigurovateľného trénera neurónových sietí. </p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">datamodule</td><td>Dátový modul obsahujúci MvsFS dataset. </td></tr>
+    <tr><td class="paramname">model</td><td>Architektúra neurónovej siete. </td></tr>
+    <tr><td class="paramname">input_shape</td><td>Tvar vstupu do neurónovej siete. </td></tr>
+    <tr><td class="paramname">criterion</td><td>Loss funkcia. </td></tr>
+    <tr><td class="paramname">optimizer</td><td>Optimalizačný algoritmus trénovania. </td></tr>
+    <tr><td class="paramname">patience</td><td>Počet epoch, ktoré je možné vykonať po sebe bez vylepšenia výsledkov trénovania. </td></tr>
+    <tr><td class="paramname">min_delta</td><td>Minimálny rozdiel medzi najlepším výsledkom a aktuálnym výsledkom potrebný aby sa epocha považovala za neúspešnú. </td></tr>
+    <tr><td class="paramname">max_epoch</td><td>Maximálny počet vykonaných epoch. </td></tr>
+    <tr><td class="paramname">output_dir</td><td>Priečinok kde sa uložia výsledky trénovania. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentácia k metódam</h2>
+<a id="a55eef41d121027a7fe2d1f66c2936c05" name="a55eef41d121027a7fe2d1f66c2936c05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55eef41d121027a7fe2d1f66c2936c05">&#9670;&#160;</a></span>epoch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">trainer.Trainer.epoch </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dataloader</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>training</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>caption</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generická metóda pre všetky epochy. </p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataloader</td><td>Trieda pomocou ktorej periodicky čítame dávky nášho datasetu. </td></tr>
+    <tr><td class="paramname">training</td><td>Ak je hodnota True, tak vykonávame spätnú propagáciu. Ak je hodnota False, tak spätnú propagáciu nevykonávame. </td></tr>
+    <tr><td class="paramname">caption</td><td>Popis aktuálnej epochy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0ee9562c70dd664812523512d73faefa" name="a0ee9562c70dd664812523512d73faefa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ee9562c70dd664812523512d73faefa">&#9670;&#160;</a></span>fit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">trainer.Trainer.fit </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>checkpoint</em><span class="paramdefsep"> = </span><span class="paramdefval">None</span></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Táto funkcia spustí trénovanie neurónovej siete. </p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">checkpoint</td><td>Názov súboru s checkpointom trénovania. Ak nechceme použíť checkpoint a chceme začať trénovať od začiatku, tak zadáme null hodnotu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7011bc6b0eb6e2da1d67f2312b41aa26" name="a7011bc6b0eb6e2da1d67f2312b41aa26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7011bc6b0eb6e2da1d67f2312b41aa26">&#9670;&#160;</a></span>load_checkpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">trainer.Trainer.load_checkpoint </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>filename</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Načítanie priebežných výsledkov trénovania z checkpointu. </p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Súbor z ktorého načítame checkpoint. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a83007cd1322a21a4c84cbf05f6db7a51" name="a83007cd1322a21a4c84cbf05f6db7a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83007cd1322a21a4c84cbf05f6db7a51">&#9670;&#160;</a></span>save_checkpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">trainer.Trainer.save_checkpoint </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>filename</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uloženie priebežných výsledkov trénovania do checkpointu. </p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Súbor do ktorého uložíme checkpoint. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a19015a3e48001d0df25f9ba9b3ba9aa4" name="a19015a3e48001d0df25f9ba9b3ba9aa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19015a3e48001d0df25f9ba9b3ba9aa4">&#9670;&#160;</a></span>save_model()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">trainer.Trainer.save_model </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uloženie výsledného modelu do jit formátu. </p>
+<p>Tento model používame v šachovom engine Malakh. </p>
+
+</div>
+</div>
+<a id="acd28aae9d370340080a973ac152f1827" name="acd28aae9d370340080a973ac152f1827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd28aae9d370340080a973ac152f1827">&#9670;&#160;</a></span>save_plot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">trainer.Trainer.save_plot </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>filename</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>caption</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>metric_name</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>train_values</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>val_values</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uloženie trénovacích a validačných metrík do grafu po ukončení trénovania. </p>
+<p>Pomocou týchto grafov môžeme vyhodnotiť priebeh trénovania a odpozorovať underfitting alebo overfitting.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Súbor do ktorého uložíme graf. </td></tr>
+    <tr><td class="paramname">caption</td><td>Názov uloženého grafu. </td></tr>
+    <tr><td class="paramname">metric_name</td><td>Názov zobrazenej metriky. </td></tr>
+    <tr><td class="paramname">train_values</td><td>Hodnoty trénovacích epoch trénovania. </td></tr>
+    <tr><td class="paramname">val_values</td><td>Hodnoty validačných epoch trénovania. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a002cd053cf336dd3ffbaff0487f8c591" name="a002cd053cf336dd3ffbaff0487f8c591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a002cd053cf336dd3ffbaff0487f8c591">&#9670;&#160;</a></span>test_epoch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">trainer.Trainer.test_epoch </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Spustenie testovacej epochy. </p>
+<p>V tejto epoche nevykonávame spätnú propagáciu. Táto epocha je spustená po ukončení trénovanie pre vyhodnotenie efektivity výsledného modelu. </p>
+
+</div>
+</div>
+<a id="afe93d5aad14d3e6afb0786a6307043b6" name="afe93d5aad14d3e6afb0786a6307043b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe93d5aad14d3e6afb0786a6307043b6">&#9670;&#160;</a></span>train_epoch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">trainer.Trainer.train_epoch </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>epoch</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Spustenie trénovacej epochy. </p>
+<p>V tejto epoche vykonávame spätnú propagáciu.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">epoch</td><td>Poradie epochy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8a44214cf5dd8dfe963eec14fce2efee" name="a8a44214cf5dd8dfe963eec14fce2efee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a44214cf5dd8dfe963eec14fce2efee">&#9670;&#160;</a></span>val_epoch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">trainer.Trainer.val_epoch </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>epoch</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Spustenie validačnej epochy. </p>
+<p>V tejto epoche nevykonávame spätnú propagáciu.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">epoch</td><td>Poradie epochy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru:<ul>
+<li><a class="el" href="trainer_8py.html">trainer.py</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generované programom&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

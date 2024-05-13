@@ -1,0 +1,115 @@
+\begin{theindex}
+
+  \item {\_\_getitem\_\_}
+    \subitem {dataset.MvsFSBitboardDataset}, \hyperpage{14}
+    \subitem {dataset.MvsFSImageDataset}, \hyperpage{16}
+  \item {\_\_init\_\_}
+    \subitem {datamodule.DataModuleBitboards}, \hyperpage{9}
+    \subitem {datamodule.DataModuleImages}, \hyperpage{10}
+    \subitem {dataset.MvsFSBitboardDataset}, \hyperpage{14}
+    \subitem {dataset.MvsFSImageDataset}, \hyperpage{15}
+    \subitem {model.CNN}, \hyperpage{8}
+    \subitem {model.MLP}, \hyperpage{12}
+    \subitem {trainer.EarlyStopper}, \hyperpage{11}
+    \subitem {trainer.Trainer}, \hyperpage{18}
+  \item {\_\_len\_\_}
+    \subitem {dataset.MvsFSBitboardDataset}, \hyperpage{14}
+    \subitem {dataset.MvsFSImageDataset}, \hyperpage{16}
+
+  \indexspace
+
+  \item {cnn\_experiment}
+    \subitem {experiment.py}, \hyperpage{24}
+
+  \indexspace
+
+  \item {datamodule.DataModuleBitboards}, \hyperpage{8}
+    \subitem {\_\_init\_\_}, \hyperpage{9}
+  \item {datamodule.DataModuleImages}, \hyperpage{9}
+    \subitem {\_\_init\_\_}, \hyperpage{10}
+  \item {datamodule.py}, \hyperpage{23}
+  \item {dataset.MvsFSBitboardDataset}, \hyperpage{13}
+    \subitem {\_\_getitem\_\_}, \hyperpage{14}
+    \subitem {\_\_init\_\_}, \hyperpage{14}
+    \subitem {\_\_len\_\_}, \hyperpage{14}
+  \item {dataset.MvsFSImageDataset}, \hyperpage{15}
+    \subitem {\_\_getitem\_\_}, \hyperpage{16}
+    \subitem {\_\_init\_\_}, \hyperpage{15}
+    \subitem {\_\_len\_\_}, \hyperpage{16}
+  \item {dataset.py}, \hyperpage{23}
+  \item {decide\_device}
+    \subitem {trainer.py}, \hyperpage{26}
+
+  \indexspace
+
+  \item {early\_stop}
+    \subitem {trainer.EarlyStopper}, \hyperpage{11}
+  \item {epoch}
+    \subitem {trainer.Trainer}, \hyperpage{18}
+  \item {experiment.py}, \hyperpage{24}
+    \subitem {cnn\_experiment}, \hyperpage{24}
+    \subitem {mlp\_experiment}, \hyperpage{25}
+
+  \indexspace
+
+  \item {fit}
+    \subitem {trainer.Trainer}, \hyperpage{18}
+  \item {forward}
+    \subitem {model.CNN}, \hyperpage{8}
+    \subitem {model.MLP}, \hyperpage{13}
+
+  \indexspace
+
+  \item {load\_checkpoint}
+    \subitem {trainer.Trainer}, \hyperpage{19}
+
+  \indexspace
+
+  \item {mlp\_experiment}
+    \subitem {experiment.py}, \hyperpage{25}
+  \item {model.CNN}, \hyperpage{7}
+    \subitem {\_\_init\_\_}, \hyperpage{8}
+    \subitem {forward}, \hyperpage{8}
+  \item {model.MLP}, \hyperpage{12}
+    \subitem {\_\_init\_\_}, \hyperpage{12}
+    \subitem {forward}, \hyperpage{13}
+  \item {model.py}, \hyperpage{25}
+
+  \indexspace
+
+  \item {save\_checkpoint}
+    \subitem {trainer.Trainer}, \hyperpage{19}
+  \item {save\_model}
+    \subitem {trainer.Trainer}, \hyperpage{19}
+  \item {save\_plot}
+    \subitem {trainer.Trainer}, \hyperpage{19}
+
+  \indexspace
+
+  \item {test\_epoch}
+    \subitem {trainer.Trainer}, \hyperpage{20}
+  \item {train\_epoch}
+    \subitem {trainer.Trainer}, \hyperpage{20}
+  \item {trainer.EarlyStopper}, \hyperpage{10}
+    \subitem {\_\_init\_\_}, \hyperpage{11}
+    \subitem {early\_stop}, \hyperpage{11}
+  \item {trainer.py}, \hyperpage{26}
+    \subitem {decide\_device}, \hyperpage{26}
+  \item {trainer.Trainer}, \hyperpage{16}
+    \subitem {\_\_init\_\_}, \hyperpage{18}
+    \subitem {epoch}, \hyperpage{18}
+    \subitem {fit}, \hyperpage{18}
+    \subitem {load\_checkpoint}, \hyperpage{19}
+    \subitem {save\_checkpoint}, \hyperpage{19}
+    \subitem {save\_model}, \hyperpage{19}
+    \subitem {save\_plot}, \hyperpage{19}
+    \subitem {test\_epoch}, \hyperpage{20}
+    \subitem {train\_epoch}, \hyperpage{20}
+    \subitem {val\_epoch}, \hyperpage{20}
+
+  \indexspace
+
+  \item {val\_epoch}
+    \subitem {trainer.Trainer}, \hyperpage{20}
+
+\end{theindex}

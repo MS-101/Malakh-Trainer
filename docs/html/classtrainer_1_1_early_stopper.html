@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Malakh Trainer - technická dokumentácia: Dokumentácia triedy trainer.EarlyStopper</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Malakh Trainer - technická dokumentácia
+   </div>
+   <div id="projectbrief">Trénovací skript neurónových model pre šachový engine Malakh</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generované programom Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Hľadať');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Načítam...</div>
+<div class="SRStatus" id="Searching">Vyhľadávam...</div>
+<div class="SRStatus" id="NoMatches">Nič sa nenašlo</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>trainer</b></li><li class="navelem"><a class="el" href="classtrainer_1_1_early_stopper.html">EarlyStopper</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Verejné metódy</a> &#124;
+<a href="#pub-attribs">Verejné atribúty</a> &#124;
+<a href="classtrainer_1_1_early_stopper-members.html">Zoznam všetkých členov</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentácia triedy trainer.EarlyStopper</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Trieda zodpovedná za predčasné zastavenie trénovania.  
+ <a href="#details">...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Verejné metódy</h2></td></tr>
+<tr class="memitem:a46b1961cb368aae4cc2477678f6b807d" id="r_a46b1961cb368aae4cc2477678f6b807d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46b1961cb368aae4cc2477678f6b807d">__init__</a> (self, patience=1, min_delta=0)</td></tr>
+<tr class="separator:a46b1961cb368aae4cc2477678f6b807d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd0015dad532bdf152b862c0e0c3dde" id="r_a3bd0015dad532bdf152b862c0e0c3dde"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bd0015dad532bdf152b862c0e0c3dde">early_stop</a> (self, val_loss)</td></tr>
+<tr class="memdesc:a3bd0015dad532bdf152b862c0e0c3dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">V tejto funkcii sa kontroluje, či aktuálna validačná strata je lepšia ako najlepší možný výsledok.  <br /></td></tr>
+<tr class="separator:a3bd0015dad532bdf152b862c0e0c3dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Verejné atribúty</h2></td></tr>
+<tr class="memitem:aeea569251ba2e6b6cfeda6746660c583" id="r_aeea569251ba2e6b6cfeda6746660c583"><td class="memItemLeft" align="right" valign="top"><a id="aeea569251ba2e6b6cfeda6746660c583" name="aeea569251ba2e6b6cfeda6746660c583"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>patience</b></td></tr>
+<tr class="separator:aeea569251ba2e6b6cfeda6746660c583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c42f08cdc5962296cd30a94307e328a" id="r_a0c42f08cdc5962296cd30a94307e328a"><td class="memItemLeft" align="right" valign="top"><a id="a0c42f08cdc5962296cd30a94307e328a" name="a0c42f08cdc5962296cd30a94307e328a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>min_delta</b></td></tr>
+<tr class="separator:a0c42f08cdc5962296cd30a94307e328a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f00625c4f7248e8f55cc33c2b9ac85d" id="r_a3f00625c4f7248e8f55cc33c2b9ac85d"><td class="memItemLeft" align="right" valign="top"><a id="a3f00625c4f7248e8f55cc33c2b9ac85d" name="a3f00625c4f7248e8f55cc33c2b9ac85d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>counter</b></td></tr>
+<tr class="separator:a3f00625c4f7248e8f55cc33c2b9ac85d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90161d99a6d2989d809a2ce8588590ac" id="r_a90161d99a6d2989d809a2ce8588590ac"><td class="memItemLeft" align="right" valign="top"><a id="a90161d99a6d2989d809a2ce8588590ac" name="a90161d99a6d2989d809a2ce8588590ac"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>min_val_loss</b></td></tr>
+<tr class="separator:a90161d99a6d2989d809a2ce8588590ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailný popis</h2>
+<div class="textblock"><p>Trieda zodpovedná za predčasné zastavenie trénovania. </p>
+</div><h2 class="groupheader">Dokumentácia konštruktoru a deštruktoru</h2>
+<a id="a46b1961cb368aae4cc2477678f6b807d" name="a46b1961cb368aae4cc2477678f6b807d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46b1961cb368aae4cc2477678f6b807d">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">trainer.EarlyStopper.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>patience</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>min_delta</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Konštruktor predčasného ukončovateľa trénovania.
+
+@param patience: Počet epoch, ktoré je možné vykonať po sebe bez vylepšenia výsledkov trénovania.
+@param min_delta: Minimálny rozdiel medzi najlepším výsledkom a aktuálnym výsledkom potrebný aby sa epocha považovala za neúspešnú.
+</pre> 
+</div>
+</div>
+<h2 class="groupheader">Dokumentácia k metódam</h2>
+<a id="a3bd0015dad532bdf152b862c0e0c3dde" name="a3bd0015dad532bdf152b862c0e0c3dde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd0015dad532bdf152b862c0e0c3dde">&#9670;&#160;</a></span>early_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">trainer.EarlyStopper.early_stop </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>val_loss</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>V tejto funkcii sa kontroluje, či aktuálna validačná strata je lepšia ako najlepší možný výsledok. </p>
+<p>Ak áno, tak sa počítadlo trpezlivosti reštartuje na 0. Ak nie a chyby je vyššia od najlepšieho výsledku o min_delta hodnotu, tak sa inkrementuje počítadlo trpezlivosti. Ak počítadlo trpezlivosti dosiahlo maximálnu hodnotu, tak sa ukončí trénovanie.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val_loss</td><td>Validačnú strata aktuálnej epochy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>True ak sa trénovanie má predčasne ukončiť, False ak trénovanie má pokračovať. </dd></dl>
+
+</div>
+</div>
+<hr/>Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru:<ul>
+<li><a class="el" href="trainer_8py.html">trainer.py</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generované programom&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

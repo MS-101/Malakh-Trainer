@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Malakh Trainer - technická dokumentácia: Dokumentácia triedy model.CNN</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Malakh Trainer - technická dokumentácia
+   </div>
+   <div id="projectbrief">Trénovací skript neurónových model pre šachový engine Malakh</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generované programom Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Hľadať');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Načítam...</div>
+<div class="SRStatus" id="Searching">Vyhľadávam...</div>
+<div class="SRStatus" id="NoMatches">Nič sa nenašlo</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>model</b></li><li class="navelem"><a class="el" href="classmodel_1_1_c_n_n.html">CNN</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Verejné metódy</a> &#124;
+<a href="#pub-attribs">Verejné atribúty</a> &#124;
+<a href="classmodel_1_1_c_n_n-members.html">Zoznam všetkých členov</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentácia triedy model.CNN</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Architektúra konvolučnej neurónovej siete.  
+ <a href="#details">...</a></p>
+<div class="dynheader">
+Diagram dedičnosti pre triedu model.CNN</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classmodel_1_1_c_n_n.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Verejné metódy</h2></td></tr>
+<tr class="memitem:a1022400ce4c1051a237525fec8c38c17" id="r_a1022400ce4c1051a237525fec8c38c17"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1022400ce4c1051a237525fec8c38c17">__init__</a> (self, conv_layers, conv_norm, conv_activ, fc_layers, fc_activ)</td></tr>
+<tr class="memdesc:a1022400ce4c1051a237525fec8c38c17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konštruktor konvolučnej neurónovej siete.  <br /></td></tr>
+<tr class="separator:a1022400ce4c1051a237525fec8c38c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab32fb559d44adca47e56d5e0a25a9830" id="r_ab32fb559d44adca47e56d5e0a25a9830"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab32fb559d44adca47e56d5e0a25a9830">forward</a> (self, x)</td></tr>
+<tr class="memdesc:ab32fb559d44adca47e56d5e0a25a9830"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predná propagácia cez neurónovú sieť.  <br /></td></tr>
+<tr class="separator:ab32fb559d44adca47e56d5e0a25a9830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Verejné atribúty</h2></td></tr>
+<tr class="memitem:abb04f49b7ddbbf0ecc430a12bccf729b" id="r_abb04f49b7ddbbf0ecc430a12bccf729b"><td class="memItemLeft" align="right" valign="top"><a id="abb04f49b7ddbbf0ecc430a12bccf729b" name="abb04f49b7ddbbf0ecc430a12bccf729b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>conv</b></td></tr>
+<tr class="separator:abb04f49b7ddbbf0ecc430a12bccf729b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eb7d4bde656742ccf1badac17ad8b65" id="r_a2eb7d4bde656742ccf1badac17ad8b65"><td class="memItemLeft" align="right" valign="top"><a id="a2eb7d4bde656742ccf1badac17ad8b65" name="a2eb7d4bde656742ccf1badac17ad8b65"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>fc_input</b></td></tr>
+<tr class="separator:a2eb7d4bde656742ccf1badac17ad8b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6cae5af49a45e0bf9d5bcba20c6172a" id="r_ad6cae5af49a45e0bf9d5bcba20c6172a"><td class="memItemLeft" align="right" valign="top"><a id="ad6cae5af49a45e0bf9d5bcba20c6172a" name="ad6cae5af49a45e0bf9d5bcba20c6172a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>fc</b></td></tr>
+<tr class="separator:ad6cae5af49a45e0bf9d5bcba20c6172a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a168e9c750d905bb7467cc19051297078" id="r_a168e9c750d905bb7467cc19051297078"><td class="memItemLeft" align="right" valign="top"><a id="a168e9c750d905bb7467cc19051297078" name="a168e9c750d905bb7467cc19051297078"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>output</b></td></tr>
+<tr class="separator:a168e9c750d905bb7467cc19051297078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailný popis</h2>
+<div class="textblock"><p>Architektúra konvolučnej neurónovej siete. </p>
+</div><h2 class="groupheader">Dokumentácia konštruktoru a deštruktoru</h2>
+<a id="a1022400ce4c1051a237525fec8c38c17" name="a1022400ce4c1051a237525fec8c38c17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1022400ce4c1051a237525fec8c38c17">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">model.CNN.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>conv_layers</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>conv_norm</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>conv_activ</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fc_layers</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fc_activ</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konštruktor konvolučnej neurónovej siete. </p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conv_layers</td><td>Počet konvolučných vrstiev. </td></tr>
+    <tr><td class="paramname">conv_activ</td><td>Aktivačná vrstva konvolučných vrstiev. </td></tr>
+    <tr><td class="paramname">fc_layers</td><td>Počet plne prepojených vrstiev. </td></tr>
+    <tr><td class="paramname">fc_activ</td><td>Aktivačná vrstva plne prepojených vrstiev. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentácia k metódam</h2>
+<a id="ab32fb559d44adca47e56d5e0a25a9830" name="ab32fb559d44adca47e56d5e0a25a9830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab32fb559d44adca47e56d5e0a25a9830">&#9670;&#160;</a></span>forward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">model.CNN.forward </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Predná propagácia cez neurónovú sieť. </p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Vstup na ktorom vykonávame predikciu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>Predikovaná hodnota. </dd></dl>
+
+</div>
+</div>
+<hr/>Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru:<ul>
+<li><a class="el" href="model_8py.html">model.py</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generované programom&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

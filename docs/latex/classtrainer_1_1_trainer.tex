@@ -1,0 +1,257 @@
+\doxysection{Dokumentácia triedy trainer.\+Trainer}
+\hypertarget{classtrainer_1_1_trainer}{}\label{classtrainer_1_1_trainer}\index{trainer.Trainer@{trainer.Trainer}}
+
+
+Trieda zodpovedná za trénovanie neurónových sietí.  
+
+
+\doxysubsubsection*{Verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtrainer_1_1_trainer_ae02eae81967eedeaa44aec0597998281}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, datamodule, model, input\+\_\+shape, criterion, optimizer, patience, min\+\_\+delta, max\+\_\+epoch, output\+\_\+dir)
+\begin{DoxyCompactList}\small\item\em Konštruktor konfigurovateľného trénera neurónových sietí. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtrainer_1_1_trainer_a0ee9562c70dd664812523512d73faefa}{fit}} (self, checkpoint=None)
+\begin{DoxyCompactList}\small\item\em Táto funkcia spustí trénovanie neurónovej siete. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtrainer_1_1_trainer_afe93d5aad14d3e6afb0786a6307043b6}{train\+\_\+epoch}} (self, \mbox{\hyperlink{classtrainer_1_1_trainer_a55eef41d121027a7fe2d1f66c2936c05}{epoch}})
+\begin{DoxyCompactList}\small\item\em Spustenie trénovacej epochy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtrainer_1_1_trainer_a8a44214cf5dd8dfe963eec14fce2efee}{val\+\_\+epoch}} (self, \mbox{\hyperlink{classtrainer_1_1_trainer_a55eef41d121027a7fe2d1f66c2936c05}{epoch}})
+\begin{DoxyCompactList}\small\item\em Spustenie validačnej epochy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtrainer_1_1_trainer_a002cd053cf336dd3ffbaff0487f8c591}{test\+\_\+epoch}} (self)
+\begin{DoxyCompactList}\small\item\em Spustenie testovacej epochy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtrainer_1_1_trainer_a55eef41d121027a7fe2d1f66c2936c05}{epoch}} (self, dataloader, training, caption)
+\begin{DoxyCompactList}\small\item\em Generická metóda pre všetky epochy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtrainer_1_1_trainer_a7011bc6b0eb6e2da1d67f2312b41aa26}{load\+\_\+checkpoint}} (self, filename)
+\begin{DoxyCompactList}\small\item\em Načítanie priebežných výsledkov trénovania z checkpointu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtrainer_1_1_trainer_a83007cd1322a21a4c84cbf05f6db7a51}{save\+\_\+checkpoint}} (self, filename)
+\begin{DoxyCompactList}\small\item\em Uloženie priebežných výsledkov trénovania do checkpointu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtrainer_1_1_trainer_a19015a3e48001d0df25f9ba9b3ba9aa4}{save\+\_\+model}} (self)
+\begin{DoxyCompactList}\small\item\em Uloženie výsledného modelu do jit formátu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtrainer_1_1_trainer_acd28aae9d370340080a973ac152f1827}{save\+\_\+plot}} (self, filename, caption, metric\+\_\+name, train\+\_\+values, val\+\_\+values)
+\begin{DoxyCompactList}\small\item\em Uloženie trénovacích a validačných metrík do grafu po ukončení trénovania. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Verejné atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classtrainer_1_1_trainer_acdc30e71d17dbbc4c40d39d79a855f12}\label{classtrainer_1_1_trainer_acdc30e71d17dbbc4c40d39d79a855f12} 
+{\bfseries device}
+\item 
+\Hypertarget{classtrainer_1_1_trainer_a1d6f844a38e98116f4f393e0beb65d52}\label{classtrainer_1_1_trainer_a1d6f844a38e98116f4f393e0beb65d52} 
+{\bfseries datamodule}
+\item 
+\Hypertarget{classtrainer_1_1_trainer_ab032d4299faea7392c8cd80999fc35a1}\label{classtrainer_1_1_trainer_ab032d4299faea7392c8cd80999fc35a1} 
+{\bfseries model}
+\item 
+\Hypertarget{classtrainer_1_1_trainer_a43ff58e7f778821a4ce9855f544a5eae}\label{classtrainer_1_1_trainer_a43ff58e7f778821a4ce9855f544a5eae} 
+{\bfseries input\+\_\+shape}
+\item 
+\Hypertarget{classtrainer_1_1_trainer_a066696d96dd24d6e829c1196d3b222bd}\label{classtrainer_1_1_trainer_a066696d96dd24d6e829c1196d3b222bd} 
+{\bfseries criterion}
+\item 
+\Hypertarget{classtrainer_1_1_trainer_a1b94ce7b73b781862ec5b01bd1c773de}\label{classtrainer_1_1_trainer_a1b94ce7b73b781862ec5b01bd1c773de} 
+{\bfseries optimizer}
+\item 
+\Hypertarget{classtrainer_1_1_trainer_a6e7a28db6a5d4e768f72f6d0a0a02631}\label{classtrainer_1_1_trainer_a6e7a28db6a5d4e768f72f6d0a0a02631} 
+{\bfseries early\+\_\+stopper}
+\item 
+\Hypertarget{classtrainer_1_1_trainer_a90fa9c02e8f28b8bded6bdf153cb5ef7}\label{classtrainer_1_1_trainer_a90fa9c02e8f28b8bded6bdf153cb5ef7} 
+{\bfseries max\+\_\+epoch}
+\item 
+\Hypertarget{classtrainer_1_1_trainer_af97a699517c9460aedb43c5c5518ad3e}\label{classtrainer_1_1_trainer_af97a699517c9460aedb43c5c5518ad3e} 
+{\bfseries output\+\_\+dir}
+\item 
+\Hypertarget{classtrainer_1_1_trainer_a42a204a7c9ba5fdf496d2dfc7f3cafb9}\label{classtrainer_1_1_trainer_a42a204a7c9ba5fdf496d2dfc7f3cafb9} 
+{\bfseries train\+\_\+losses}
+\item 
+\Hypertarget{classtrainer_1_1_trainer_a28f743aae458e816580b5906ca9dad12}\label{classtrainer_1_1_trainer_a28f743aae458e816580b5906ca9dad12} 
+{\bfseries val\+\_\+losses}
+\item 
+\Hypertarget{classtrainer_1_1_trainer_a20ada17cd38366ca6dcf5715f5f8957a}\label{classtrainer_1_1_trainer_a20ada17cd38366ca6dcf5715f5f8957a} 
+{\bfseries cur\+\_\+epoch}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Trieda zodpovedná za trénovanie neurónových sietí. 
+
+\doxysubsection{Dokumentácia konštruktoru a deštruktoru}
+\Hypertarget{classtrainer_1_1_trainer_ae02eae81967eedeaa44aec0597998281}\label{classtrainer_1_1_trainer_ae02eae81967eedeaa44aec0597998281} 
+\index{trainer.Trainer@{trainer.Trainer}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!trainer.Trainer@{trainer.Trainer}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily trainer.\+Trainer.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{datamodule,  }\item[{}]{model,  }\item[{}]{input\+\_\+shape,  }\item[{}]{criterion,  }\item[{}]{optimizer,  }\item[{}]{patience,  }\item[{}]{min\+\_\+delta,  }\item[{}]{max\+\_\+epoch,  }\item[{}]{output\+\_\+dir }\end{DoxyParamCaption})}
+
+
+
+Konštruktor konfigurovateľného trénera neurónových sietí. 
+
+
+\begin{DoxyParams}{Parametre}
+{\em datamodule} & Dátový modul obsahujúci Mvs\+FS dataset. \\
+\hline
+{\em model} & Architektúra neurónovej siete. \\
+\hline
+{\em input\+\_\+shape} & Tvar vstupu do neurónovej siete. \\
+\hline
+{\em criterion} & Loss funkcia. \\
+\hline
+{\em optimizer} & Optimalizačný algoritmus trénovania. \\
+\hline
+{\em patience} & Počet epoch, ktoré je možné vykonať po sebe bez vylepšenia výsledkov trénovania. \\
+\hline
+{\em min\+\_\+delta} & Minimálny rozdiel medzi najlepším výsledkom a aktuálnym výsledkom potrebný aby sa epocha považovala za neúspešnú. \\
+\hline
+{\em max\+\_\+epoch} & Maximálny počet vykonaných epoch. \\
+\hline
+{\em output\+\_\+dir} & Priečinok kde sa uložia výsledky trénovania. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{classtrainer_1_1_trainer_a55eef41d121027a7fe2d1f66c2936c05}\label{classtrainer_1_1_trainer_a55eef41d121027a7fe2d1f66c2936c05} 
+\index{trainer.Trainer@{trainer.Trainer}!epoch@{epoch}}
+\index{epoch@{epoch}!trainer.Trainer@{trainer.Trainer}}
+\doxysubsubsection{\texorpdfstring{epoch()}{epoch()}}
+{\footnotesize\ttfamily trainer.\+Trainer.\+epoch (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dataloader,  }\item[{}]{training,  }\item[{}]{caption }\end{DoxyParamCaption})}
+
+
+
+Generická metóda pre všetky epochy. 
+
+
+\begin{DoxyParams}{Parametre}
+{\em dataloader} & Trieda pomocou ktorej periodicky čítame dávky nášho datasetu. \\
+\hline
+{\em training} & Ak je hodnota True, tak vykonávame spätnú propagáciu. Ak je hodnota False, tak spätnú propagáciu nevykonávame. \\
+\hline
+{\em caption} & Popis aktuálnej epochy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classtrainer_1_1_trainer_a0ee9562c70dd664812523512d73faefa}\label{classtrainer_1_1_trainer_a0ee9562c70dd664812523512d73faefa} 
+\index{trainer.Trainer@{trainer.Trainer}!fit@{fit}}
+\index{fit@{fit}!trainer.Trainer@{trainer.Trainer}}
+\doxysubsubsection{\texorpdfstring{fit()}{fit()}}
+{\footnotesize\ttfamily trainer.\+Trainer.\+fit (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{checkpoint = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Táto funkcia spustí trénovanie neurónovej siete. 
+
+
+\begin{DoxyParams}{Parametre}
+{\em checkpoint} & Názov súboru s checkpointom trénovania. Ak nechceme použíť checkpoint a chceme začať trénovať od začiatku, tak zadáme null hodnotu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classtrainer_1_1_trainer_a7011bc6b0eb6e2da1d67f2312b41aa26}\label{classtrainer_1_1_trainer_a7011bc6b0eb6e2da1d67f2312b41aa26} 
+\index{trainer.Trainer@{trainer.Trainer}!load\_checkpoint@{load\_checkpoint}}
+\index{load\_checkpoint@{load\_checkpoint}!trainer.Trainer@{trainer.Trainer}}
+\doxysubsubsection{\texorpdfstring{load\_checkpoint()}{load\_checkpoint()}}
+{\footnotesize\ttfamily trainer.\+Trainer.\+load\+\_\+checkpoint (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename }\end{DoxyParamCaption})}
+
+
+
+Načítanie priebežných výsledkov trénovania z checkpointu. 
+
+
+\begin{DoxyParams}{Parametre}
+{\em filename} & Súbor z ktorého načítame checkpoint. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classtrainer_1_1_trainer_a83007cd1322a21a4c84cbf05f6db7a51}\label{classtrainer_1_1_trainer_a83007cd1322a21a4c84cbf05f6db7a51} 
+\index{trainer.Trainer@{trainer.Trainer}!save\_checkpoint@{save\_checkpoint}}
+\index{save\_checkpoint@{save\_checkpoint}!trainer.Trainer@{trainer.Trainer}}
+\doxysubsubsection{\texorpdfstring{save\_checkpoint()}{save\_checkpoint()}}
+{\footnotesize\ttfamily trainer.\+Trainer.\+save\+\_\+checkpoint (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename }\end{DoxyParamCaption})}
+
+
+
+Uloženie priebežných výsledkov trénovania do checkpointu. 
+
+
+\begin{DoxyParams}{Parametre}
+{\em filename} & Súbor do ktorého uložíme checkpoint. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classtrainer_1_1_trainer_a19015a3e48001d0df25f9ba9b3ba9aa4}\label{classtrainer_1_1_trainer_a19015a3e48001d0df25f9ba9b3ba9aa4} 
+\index{trainer.Trainer@{trainer.Trainer}!save\_model@{save\_model}}
+\index{save\_model@{save\_model}!trainer.Trainer@{trainer.Trainer}}
+\doxysubsubsection{\texorpdfstring{save\_model()}{save\_model()}}
+{\footnotesize\ttfamily trainer.\+Trainer.\+save\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Uloženie výsledného modelu do jit formátu. 
+
+Tento model používame v šachovom engine Malakh. \Hypertarget{classtrainer_1_1_trainer_acd28aae9d370340080a973ac152f1827}\label{classtrainer_1_1_trainer_acd28aae9d370340080a973ac152f1827} 
+\index{trainer.Trainer@{trainer.Trainer}!save\_plot@{save\_plot}}
+\index{save\_plot@{save\_plot}!trainer.Trainer@{trainer.Trainer}}
+\doxysubsubsection{\texorpdfstring{save\_plot()}{save\_plot()}}
+{\footnotesize\ttfamily trainer.\+Trainer.\+save\+\_\+plot (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename,  }\item[{}]{caption,  }\item[{}]{metric\+\_\+name,  }\item[{}]{train\+\_\+values,  }\item[{}]{val\+\_\+values }\end{DoxyParamCaption})}
+
+
+
+Uloženie trénovacích a validačných metrík do grafu po ukončení trénovania. 
+
+Pomocou týchto grafov môžeme vyhodnotiť priebeh trénovania a odpozorovať underfitting alebo overfitting.
+
+
+\begin{DoxyParams}{Parametre}
+{\em filename} & Súbor do ktorého uložíme graf. \\
+\hline
+{\em caption} & Názov uloženého grafu. \\
+\hline
+{\em metric\+\_\+name} & Názov zobrazenej metriky. \\
+\hline
+{\em train\+\_\+values} & Hodnoty trénovacích epoch trénovania. \\
+\hline
+{\em val\+\_\+values} & Hodnoty validačných epoch trénovania. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classtrainer_1_1_trainer_a002cd053cf336dd3ffbaff0487f8c591}\label{classtrainer_1_1_trainer_a002cd053cf336dd3ffbaff0487f8c591} 
+\index{trainer.Trainer@{trainer.Trainer}!test\_epoch@{test\_epoch}}
+\index{test\_epoch@{test\_epoch}!trainer.Trainer@{trainer.Trainer}}
+\doxysubsubsection{\texorpdfstring{test\_epoch()}{test\_epoch()}}
+{\footnotesize\ttfamily trainer.\+Trainer.\+test\+\_\+epoch (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Spustenie testovacej epochy. 
+
+V tejto epoche nevykonávame spätnú propagáciu. Táto epocha je spustená po ukončení trénovanie pre vyhodnotenie efektivity výsledného modelu. \Hypertarget{classtrainer_1_1_trainer_afe93d5aad14d3e6afb0786a6307043b6}\label{classtrainer_1_1_trainer_afe93d5aad14d3e6afb0786a6307043b6} 
+\index{trainer.Trainer@{trainer.Trainer}!train\_epoch@{train\_epoch}}
+\index{train\_epoch@{train\_epoch}!trainer.Trainer@{trainer.Trainer}}
+\doxysubsubsection{\texorpdfstring{train\_epoch()}{train\_epoch()}}
+{\footnotesize\ttfamily trainer.\+Trainer.\+train\+\_\+epoch (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{epoch }\end{DoxyParamCaption})}
+
+
+
+Spustenie trénovacej epochy. 
+
+V tejto epoche vykonávame spätnú propagáciu.
+
+
+\begin{DoxyParams}{Parametre}
+{\em epoch} & Poradie epochy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classtrainer_1_1_trainer_a8a44214cf5dd8dfe963eec14fce2efee}\label{classtrainer_1_1_trainer_a8a44214cf5dd8dfe963eec14fce2efee} 
+\index{trainer.Trainer@{trainer.Trainer}!val\_epoch@{val\_epoch}}
+\index{val\_epoch@{val\_epoch}!trainer.Trainer@{trainer.Trainer}}
+\doxysubsubsection{\texorpdfstring{val\_epoch()}{val\_epoch()}}
+{\footnotesize\ttfamily trainer.\+Trainer.\+val\+\_\+epoch (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{epoch }\end{DoxyParamCaption})}
+
+
+
+Spustenie validačnej epochy. 
+
+V tejto epoche nevykonávame spätnú propagáciu.
+
+
+\begin{DoxyParams}{Parametre}
+{\em epoch} & Poradie epochy. \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{trainer_8py}{trainer.\+py}}\end{DoxyCompactItemize}

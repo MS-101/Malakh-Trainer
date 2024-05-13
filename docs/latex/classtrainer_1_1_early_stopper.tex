@@ -1,0 +1,74 @@
+\doxysection{Dokumentácia triedy trainer.\+Early\+Stopper}
+\hypertarget{classtrainer_1_1_early_stopper}{}\label{classtrainer_1_1_early_stopper}\index{trainer.EarlyStopper@{trainer.EarlyStopper}}
+
+
+Trieda zodpovedná za predčasné zastavenie trénovania.  
+
+
+\doxysubsubsection*{Verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtrainer_1_1_early_stopper_a46b1961cb368aae4cc2477678f6b807d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, patience=1, min\+\_\+delta=0)
+\item 
+\mbox{\hyperlink{classtrainer_1_1_early_stopper_a3bd0015dad532bdf152b862c0e0c3dde}{early\+\_\+stop}} (self, val\+\_\+loss)
+\begin{DoxyCompactList}\small\item\em V tejto funkcii sa kontroluje, či aktuálna validačná strata je lepšia ako najlepší možný výsledok. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Verejné atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classtrainer_1_1_early_stopper_aeea569251ba2e6b6cfeda6746660c583}\label{classtrainer_1_1_early_stopper_aeea569251ba2e6b6cfeda6746660c583} 
+{\bfseries patience}
+\item 
+\Hypertarget{classtrainer_1_1_early_stopper_a0c42f08cdc5962296cd30a94307e328a}\label{classtrainer_1_1_early_stopper_a0c42f08cdc5962296cd30a94307e328a} 
+{\bfseries min\+\_\+delta}
+\item 
+\Hypertarget{classtrainer_1_1_early_stopper_a3f00625c4f7248e8f55cc33c2b9ac85d}\label{classtrainer_1_1_early_stopper_a3f00625c4f7248e8f55cc33c2b9ac85d} 
+{\bfseries counter}
+\item 
+\Hypertarget{classtrainer_1_1_early_stopper_a90161d99a6d2989d809a2ce8588590ac}\label{classtrainer_1_1_early_stopper_a90161d99a6d2989d809a2ce8588590ac} 
+{\bfseries min\+\_\+val\+\_\+loss}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Trieda zodpovedná za predčasné zastavenie trénovania. 
+
+\doxysubsection{Dokumentácia konštruktoru a deštruktoru}
+\Hypertarget{classtrainer_1_1_early_stopper_a46b1961cb368aae4cc2477678f6b807d}\label{classtrainer_1_1_early_stopper_a46b1961cb368aae4cc2477678f6b807d} 
+\index{trainer.EarlyStopper@{trainer.EarlyStopper}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!trainer.EarlyStopper@{trainer.EarlyStopper}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily trainer.\+Early\+Stopper.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{patience = {\ttfamily 1},  }\item[{}]{min\+\_\+delta = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Konštruktor predčasného ukončovateľa trénovania.
+
+@param patience: Počet epoch, ktoré je možné vykonať po sebe bez vylepšenia výsledkov trénovania.
+@param min_delta: Minimálny rozdiel medzi najlepším výsledkom a aktuálnym výsledkom potrebný aby sa epocha považovala za neúspešnú.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{classtrainer_1_1_early_stopper_a3bd0015dad532bdf152b862c0e0c3dde}\label{classtrainer_1_1_early_stopper_a3bd0015dad532bdf152b862c0e0c3dde} 
+\index{trainer.EarlyStopper@{trainer.EarlyStopper}!early\_stop@{early\_stop}}
+\index{early\_stop@{early\_stop}!trainer.EarlyStopper@{trainer.EarlyStopper}}
+\doxysubsubsection{\texorpdfstring{early\_stop()}{early\_stop()}}
+{\footnotesize\ttfamily trainer.\+Early\+Stopper.\+early\+\_\+stop (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{val\+\_\+loss }\end{DoxyParamCaption})}
+
+
+
+V tejto funkcii sa kontroluje, či aktuálna validačná strata je lepšia ako najlepší možný výsledok. 
+
+Ak áno, tak sa počítadlo trpezlivosti reštartuje na 0. Ak nie a chyby je vyššia od najlepšieho výsledku o min\+\_\+delta hodnotu, tak sa inkrementuje počítadlo trpezlivosti. Ak počítadlo trpezlivosti dosiahlo maximálnu hodnotu, tak sa ukončí trénovanie.
+
+
+\begin{DoxyParams}{Parametre}
+{\em val\+\_\+loss} & Validačnú strata aktuálnej epochy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+True ak sa trénovanie má predčasne ukončiť, False ak trénovanie má pokračovať. 
+\end{DoxyReturn}
+
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{trainer_8py}{trainer.\+py}}\end{DoxyCompactItemize}

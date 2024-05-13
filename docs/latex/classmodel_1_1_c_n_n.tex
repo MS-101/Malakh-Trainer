@@ -1,0 +1,88 @@
+\doxysection{Dokumentácia triedy model.\+CNN}
+\hypertarget{classmodel_1_1_c_n_n}{}\label{classmodel_1_1_c_n_n}\index{model.CNN@{model.CNN}}
+
+
+Architektúra konvolučnej neurónovej siete.  
+
+
+Diagram dedičnosti pre triedu model.\+CNN\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmodel_1_1_c_n_n}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1_c_n_n_a1022400ce4c1051a237525fec8c38c17}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, conv\+\_\+layers, conv\+\_\+norm, conv\+\_\+activ, fc\+\_\+layers, fc\+\_\+activ)
+\begin{DoxyCompactList}\small\item\em Konštruktor konvolučnej neurónovej siete. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmodel_1_1_c_n_n_ab32fb559d44adca47e56d5e0a25a9830}{forward}} (self, x)
+\begin{DoxyCompactList}\small\item\em Predná propagácia cez neurónovú sieť. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Verejné atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmodel_1_1_c_n_n_abb04f49b7ddbbf0ecc430a12bccf729b}\label{classmodel_1_1_c_n_n_abb04f49b7ddbbf0ecc430a12bccf729b} 
+{\bfseries conv}
+\item 
+\Hypertarget{classmodel_1_1_c_n_n_a2eb7d4bde656742ccf1badac17ad8b65}\label{classmodel_1_1_c_n_n_a2eb7d4bde656742ccf1badac17ad8b65} 
+{\bfseries fc\+\_\+input}
+\item 
+\Hypertarget{classmodel_1_1_c_n_n_ad6cae5af49a45e0bf9d5bcba20c6172a}\label{classmodel_1_1_c_n_n_ad6cae5af49a45e0bf9d5bcba20c6172a} 
+{\bfseries fc}
+\item 
+\Hypertarget{classmodel_1_1_c_n_n_a168e9c750d905bb7467cc19051297078}\label{classmodel_1_1_c_n_n_a168e9c750d905bb7467cc19051297078} 
+{\bfseries output}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Architektúra konvolučnej neurónovej siete. 
+
+\doxysubsection{Dokumentácia konštruktoru a deštruktoru}
+\Hypertarget{classmodel_1_1_c_n_n_a1022400ce4c1051a237525fec8c38c17}\label{classmodel_1_1_c_n_n_a1022400ce4c1051a237525fec8c38c17} 
+\index{model.CNN@{model.CNN}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!model.CNN@{model.CNN}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily model.\+CNN.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{conv\+\_\+layers,  }\item[{}]{conv\+\_\+norm,  }\item[{}]{conv\+\_\+activ,  }\item[{}]{fc\+\_\+layers,  }\item[{}]{fc\+\_\+activ }\end{DoxyParamCaption})}
+
+
+
+Konštruktor konvolučnej neurónovej siete. 
+
+
+\begin{DoxyParams}{Parametre}
+{\em conv\+\_\+layers} & Počet konvolučných vrstiev. \\
+\hline
+{\em conv\+\_\+activ} & Aktivačná vrstva konvolučných vrstiev. \\
+\hline
+{\em fc\+\_\+layers} & Počet plne prepojených vrstiev. \\
+\hline
+{\em fc\+\_\+activ} & Aktivačná vrstva plne prepojených vrstiev. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{classmodel_1_1_c_n_n_ab32fb559d44adca47e56d5e0a25a9830}\label{classmodel_1_1_c_n_n_ab32fb559d44adca47e56d5e0a25a9830} 
+\index{model.CNN@{model.CNN}!forward@{forward}}
+\index{forward@{forward}!model.CNN@{model.CNN}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily model.\+CNN.\+forward (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Predná propagácia cez neurónovú sieť. 
+
+
+\begin{DoxyParams}{Parametre}
+{\em x} & Vstup na ktorom vykonávame predikciu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Predikovaná hodnota. 
+\end{DoxyReturn}
+
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{model_8py}{model.\+py}}\end{DoxyCompactItemize}

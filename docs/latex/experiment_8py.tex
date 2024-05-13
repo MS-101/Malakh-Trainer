@@ -1,0 +1,68 @@
+\doxysection{Dokumentácia súboru experiment.\+py}
+\hypertarget{experiment_8py}{}\label{experiment_8py}\index{experiment.py@{experiment.py}}
+
+
+Definícia konfigurovateľných experimentov.  
+
+
+\doxysubsubsection*{Funkcie}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{experiment_8py_adbcb11478092e025de82ed8599948ef8}{experiment.\+mlp\+\_\+experiment}} (input, output\+\_\+dir, hidden\+\_\+features, layers)
+\begin{DoxyCompactList}\small\item\em Experiment na testovanie efektivity MLP architektúry a bitboardovej formy Mvs\+FS datasetu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{experiment_8py_aec4d3c833c79ede5d813631d4a22b7d1}{experiment.\+cnn\+\_\+experiment}} (input, output\+\_\+dir, fc\+\_\+layers)
+\begin{DoxyCompactList}\small\item\em Experiment na testovanie efektivity CNN architektúry a obrázkovej formy Mvs\+FS datasetu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Definícia konfigurovateľných experimentov. 
+
+\begin{DoxyAuthor}{Autor}
+Martin Šváb 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Dátum}
+Máj 2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Dokumentácia funkcií}
+\Hypertarget{experiment_8py_aec4d3c833c79ede5d813631d4a22b7d1}\label{experiment_8py_aec4d3c833c79ede5d813631d4a22b7d1} 
+\index{experiment.py@{experiment.py}!cnn\_experiment@{cnn\_experiment}}
+\index{cnn\_experiment@{cnn\_experiment}!experiment.py@{experiment.py}}
+\doxysubsubsection{\texorpdfstring{cnn\_experiment()}{cnn\_experiment()}}
+{\footnotesize\ttfamily experiment.\+cnn\+\_\+experiment (\begin{DoxyParamCaption}\item[{}]{input,  }\item[{}]{output\+\_\+dir,  }\item[{}]{fc\+\_\+layers }\end{DoxyParamCaption})}
+
+
+
+Experiment na testovanie efektivity CNN architektúry a obrázkovej formy Mvs\+FS datasetu. 
+
+
+\begin{DoxyParams}{Parametre}
+{\em input} & Názov vstupného csv súboru. \\
+\hline
+{\em output\+\_\+dir} & Priečinok kde sa uložia výsledky experimentu. \\
+\hline
+{\em fc\+\_\+layers} & Počet plne prepojených vrstiev CNN architektúry. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{experiment_8py_adbcb11478092e025de82ed8599948ef8}\label{experiment_8py_adbcb11478092e025de82ed8599948ef8} 
+\index{experiment.py@{experiment.py}!mlp\_experiment@{mlp\_experiment}}
+\index{mlp\_experiment@{mlp\_experiment}!experiment.py@{experiment.py}}
+\doxysubsubsection{\texorpdfstring{mlp\_experiment()}{mlp\_experiment()}}
+{\footnotesize\ttfamily experiment.\+mlp\+\_\+experiment (\begin{DoxyParamCaption}\item[{}]{input,  }\item[{}]{output\+\_\+dir,  }\item[{}]{hidden\+\_\+features,  }\item[{}]{layers }\end{DoxyParamCaption})}
+
+
+
+Experiment na testovanie efektivity MLP architektúry a bitboardovej formy Mvs\+FS datasetu. 
+
+
+\begin{DoxyParams}{Parametre}
+{\em input} & Názov vstupného csv súboru. \\
+\hline
+{\em output\+\_\+dir} & Priečinok kde sa uložia výsledky experimentu. \\
+\hline
+{\em hidden\+\_\+features} & Počet neurónov skrytých vrstiev MLP architektúry. \\
+\hline
+{\em layers} & Počet skrytých vrstiev MLP architektúry. \\
+\hline
+\end{DoxyParams}

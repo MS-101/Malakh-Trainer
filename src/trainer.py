@@ -1,3 +1,11 @@
+"""!
+@file   trainer.py
+@brief  Definícia trénovania neurónovej siete.
+
+@author Martin Šváb
+@date   Máj 2024
+"""
+
 import os
 import torch
 import torchsummary
@@ -8,13 +16,34 @@ from contextlib import closing
 
 
 class EarlyStopper:
+    """!
+    Trieda zodpovedná za predčasné zastavenie trénovania.
+    """
+
     def __init__(self, patience=1, min_delta=0):
+        """
+        Konštruktor predčasného ukončovateľa trénovania.
+
+        @param patience: Počet epoch, ktoré je možné vykonať po sebe bez vylepšenia výsledkov trénovania.
+        @param min_delta: Minimálny rozdiel medzi najlepším výsledkom a aktuálnym výsledkom potrebný aby sa epocha považovala za neúspešnú.
+        """
+
         self.patience = patience
         self.min_delta = min_delta
         self.counter = 0
         self.min_val_loss = float('inf')
 
     def early_stop(self, val_loss):
+        """!
+        V tejto funkcii sa kontroluje, či aktuálna validačná strata je lepšia ako najlepší možný výsledok.
+        Ak áno, tak sa počítadlo trpezlivosti reštartuje na 0.
+        Ak nie a chyby je vyššia od najlepšieho výsledku o min_delta hodnotu, tak sa inkrementuje počítadlo trpezlivosti.
+        Ak počítadlo trpezlivosti dosiahlo maximálnu hodnotu, tak sa ukončí trénovanie.
+        
+        @param val_loss: Validačnú strata aktuálnej epochy.
+        @return True ak sa trénovanie má predčasne ukončiť, False ak trénovanie má pokračovať.
+        """
+
         if val_loss < self.min_val_loss:
             self.min_val_loss = val_loss
             self.counter = 0
@@ -25,11 +54,34 @@ class EarlyStopper:
         return False
 
 def decide_device():
+    """!
+    Pomocná funkcia na rozhodnutie použítia CPU alebo cuda režimu.
+
+    @return Ak je cuda dostupné tak hodnota cuda, ak nie je dostupné tak hodnota cpu.
+    """
     if (torch.cuda.is_available()): return "cuda"
     return "cpu"
 
 class Trainer:
+    """!
+    Trieda zodpovedná za trénovanie neurónových sietí.
+    """
+
     def __init__(self, datamodule, model, input_shape, criterion, optimizer, patience, min_delta, max_epoch, output_dir):
+        """!
+        Konštruktor konfigurovateľného trénera neurónových sietí.
+
+        @param datamodule: Dátový modul obsahujúci MvsFS dataset.
+        @param model: Architektúra neurónovej siete.
+        @param input_shape: Tvar vstupu do neurónovej siete.
+        @param criterion: Loss funkcia.
+        @param optimizer: Optimalizačný algoritmus trénovania.
+        @param patience: Počet epoch, ktoré je možné vykonať po sebe bez vylepšenia výsledkov trénovania.
+        @param min_delta: Minimálny rozdiel medzi najlepším výsledkom a aktuálnym výsledkom potrebný aby sa epocha považovala za neúspešnú.
+        @param max_epoch: Maximálny počet vykonaných epoch.
+        @param output_dir: Priečinok kde sa uložia výsledky trénovania.
+        """
+
         self.device = torch.device(decide_device())
 
         self.datamodule = datamodule
@@ -46,6 +98,12 @@ class Trainer:
         os.makedirs(self.output_dir, exist_ok=True)
 
     def fit(self, checkpoint=None):
+        """!
+        Táto funkcia spustí trénovanie neurónovej siete.
+
+        @param checkpoint: Názov súboru s checkpointom trénovania. Ak nechceme použíť checkpoint a chceme začať trénovať od začiatku, tak zadáme null hodnotu.
+        """
+
         if checkpoint:
             self.load_checkpoint(filename=checkpoint)
         else:
@@ -79,15 +137,40 @@ class Trainer:
             self.test_epoch()
           
     def train_epoch(self, epoch):
+        """!
+        Spustenie trénovacej epochy. V tejto epoche vykonávame spätnú propagáciu.
+
+        @param epoch: Poradie epochy.
+        """
+
         return self.epoch(dataloader=self.datamodule.train_loader, training=True, caption=f'Training epoch {epoch}')
 
     def val_epoch(self, epoch):
+        """!
+        Spustenie validačnej epochy. V tejto epoche nevykonávame spätnú propagáciu.
+
+        @param epoch: Poradie epochy.
+        """
+
         return self.epoch(dataloader=self.datamodule.val_loader, training=False, caption=f'Validation epoch {epoch}')
 
     def test_epoch(self):
+        """!
+        Spustenie testovacej epochy. V tejto epoche nevykonávame spätnú propagáciu.
+        Táto epocha je spustená po ukončení trénovanie pre vyhodnotenie efektivity výsledného modelu.
+        """
+
         return self.epoch(dataloader=self.datamodule.test_loader, training=False, caption=f'Testing epoch')
     
     def epoch(self, dataloader, training, caption):
+        """!
+        Generická metóda pre všetky epochy.
+
+        @param dataloader: Trieda pomocou ktorej periodicky čítame dávky nášho datasetu.
+        @param training: Ak je hodnota True, tak vykonávame spätnú propagáciu. Ak je hodnota False, tak spätnú propagáciu nevykonávame.
+        @param caption: Popis aktuálnej epochy.
+        """
+
         if training:
             self.model.train()
         else:
@@ -119,6 +202,12 @@ class Trainer:
         return avg_loss
 
     def load_checkpoint(self, filename):
+        """!
+        Načítanie priebežných výsledkov trénovania z checkpointu.
+
+        @param filename: Súbor z ktorého načítame checkpoint.
+        """
+
         dir = os.path.join(self.output_dir, 'checkpoints')
         filename = os.path.join(dir, filename)
 
@@ -133,6 +222,12 @@ class Trainer:
         self.cur_epoch = checkpoint['cur_epoch']
     
     def save_checkpoint(self, filename):
+        """!
+        Uloženie priebežných výsledkov trénovania do checkpointu.
+
+        @param filename: Súbor do ktorého uložíme checkpoint.
+        """
+
         dir = os.path.join(self.output_dir, 'checkpoints')
         os.makedirs(dir, exist_ok=True)
 
@@ -147,6 +242,11 @@ class Trainer:
         }, filename)
 
     def save_model(self):
+        """!
+        Uloženie výsledného modelu do jit formátu.
+        Tento model používame v šachovom engine Malakh.
+        """
+
         dir = self.output_dir
         os.makedirs(dir, exist_ok=True)
 
@@ -156,6 +256,17 @@ class Trainer:
         script_model.save(filename)
 
     def save_plot(self, filename, caption, metric_name, train_values, val_values):
+        """!
+        Uloženie trénovacích a validačných metrík do grafu po ukončení trénovania.
+        Pomocou týchto grafov môžeme vyhodnotiť priebeh trénovania a odpozorovať underfitting alebo overfitting.
+
+        @param filename: Súbor do ktorého uložíme graf.
+        @param caption: Názov uloženého grafu.
+        @param metric_name: Názov zobrazenej metriky.
+        @param train_values: Hodnoty trénovacích epoch trénovania.
+        @param val_values: Hodnoty validačných epoch trénovania.
+        """
+
         dir = os.path.join(self.output_dir, 'plots')
         os.makedirs(dir, exist_ok=True)
 
